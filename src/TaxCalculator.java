@@ -1,23 +1,33 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TaxCalculator {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please provide the name for the new employee you wish to be entered.");
-        String name = scanner.nextLine();
+        String name = null;
+        double salary = 0;
 
-        System.out.println("Provide a number (double value) that represents the user's annual salary.");
-        double salary = scanner.nextDouble();
+        try {
+            System.out.println("Please provide the name for the new employee you wish to be entered.");
+             name = scanner.nextLine();
+
+            System.out.println("Provide a number (double value) that represents the user's annual salary.");
+            salary = scanner.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("Error: Invalid input. Please re-run program and provide a valid value.");
+        }
 
         double calculatedTax = taxCalculation(salary);
         double calculatedSuper = superCalculation(salary);
 
-        System.out.printf("Name: %s | Salary: %s | Taxable Income: %s | SG Superannuation Contribution %s",
+        System.out.printf(
+                "Name: %s | Salary: %s | Taxable Income: %s | SG Superannuation Contribution %s",
                 name,
                 salary,
                 calculatedTax,
-                calculatedSuper);
+                calculatedSuper
+        );
     }
 
     static double taxCalculation(double salary) {
