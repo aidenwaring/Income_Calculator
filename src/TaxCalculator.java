@@ -4,11 +4,20 @@ public class TaxCalculator {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Provide a number (double value) that represents the user's annual salary.");
+        System.out.println("Please provide the name for the new employee you wish to be entered.");
+        String name = scanner.nextLine();
 
+        System.out.println("Provide a number (double value) that represents the user's annual salary.");
         double salary = scanner.nextDouble();
 
-        System.out.println(taxCalculation(salary));
+        double calculatedTax = taxCalculation(salary);
+        double calculatedSuper = superCalculation(salary);
+
+        System.out.printf("Name: %s | Salary: %s | Taxable Income: %s | SG Superannuation Contribution %s",
+                name,
+                salary,
+                calculatedTax,
+                calculatedSuper);
     }
 
     static double taxCalculation(double salary) {
@@ -26,5 +35,9 @@ public class TaxCalculator {
             tax = 54097 + (salary - 180000) * 0.45;
         }
         return tax;
+    }
+
+    static double superCalculation(double salary) {
+        return salary * 0.105;
     }
 }
