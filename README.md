@@ -49,6 +49,17 @@ their details displayed accordingly: 'name', 'salary', 'taxable income', 'supera
 
 ## Testing
 
+Simple unit tests have been created to assert that the behaviour and logic of the program produces an expected result.
+'Happy' and 'unhappy' code paths are provided.
+Tax bracket calculation is based off the provided criteria below:
+
+![Tax Bracket Table](resources/tax_bracket_table.png)
+
+### Testing Tools Used
+
+- Static code analysis
+- Code analysis (???)
+
 ## Sources
 
 ## License
@@ -56,3 +67,7 @@ their details displayed accordingly: 'name', 'salary', 'taxable income', 'supera
 ![Java](https://img.shields.io/badge/-MIT-brightgreen.svg?style=for-the-badge&logo=java&logoColor=white)
 
 ## Acknowledgements
+
+Tax calculation test criteria provided by the ATO - residential tax rates for 2019-20.
+Note: income tax result is inclusive of medicare.
+Source: [ATO](https://www.ato.gov.au/Rates/Individual-income-tax-for-prior-years/)
