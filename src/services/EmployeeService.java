@@ -5,7 +5,7 @@ import entities.Employee;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class NewEmployeeService {
+public class EmployeeService {
 
     public static void addEmployee() {
         Scanner scanner = new Scanner(System.in);

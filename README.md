@@ -1,7 +1,6 @@
 # Income, Tax & Superannuation Calculator
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ## Exercise
 
@@ -40,6 +39,26 @@ their details displayed accordingly: 'name', 'salary', 'taxable income', 'supera
 
 ![form_design](resources/form_design.png)
 
+
+## Project Structure
+
+```
+income-calculator
+├── pom.xml
+├── README.md
+├── resources
+|   └── form_design.png
+|   └── tax_bracket_table.png
+└── src
+    ├── Main.java
+    ├── entities
+    │   └── Employee.java
+    ├── services
+    │   └── NewEmployeeService.java
+    │   └── TaxSuperCalculatorHelper.java
+    └── test
+        └── EmployeeServiceTest.java
+```
 ## Getting Started
 
 - Prerequisites
@@ -50,17 +69,28 @@ their details displayed accordingly: 'name', 'salary', 'taxable income', 'supera
 ## Testing
 
 Simple unit tests have been created to assert that the behaviour and logic of the program produces an expected result.
-'Happy' and 'unhappy' code paths are provided.
+'Happy' and 'unhappy' code paths are provided to cover invalid user entry.
 Tax bracket calculation is based off the provided criteria below:
 
 ![Tax Bracket Table](resources/tax_bracket_table.png)
 
 ### Testing Tools Used
 
-- Static code analysis
-- Code analysis (???)
+- IntelliJ Static Code Analysis
+- Unit tests written with JUnit 5
+- 
 
-## Sources
+## Future Developement Beyond MVP
+
+Given the time restrictions to complete this task, items beyond creating an MVP for the client remain and may still be worked on in the future.
+Several improvements and future features have been identified and listed below:
+- Code Coverage Reporting
+- Additional Edge Case Tests
+- Develop Front-End Component
+- Implement Full RESTful API for Managing Employees
+- Explore Alternative Algorithms for Tax Calculation
+- Database Connectivity
+- Data Mocking for Testing
 
 ## License
 

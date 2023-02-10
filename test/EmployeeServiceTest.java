@@ -1,6 +1,6 @@
 import entities.Employee;
 import org.junit.jupiter.api.Test;
-import services.NewEmployeeService;
+import services.EmployeeService;
 import services.TaxSuperCalculatorHelper;
 
 import java.io.ByteArrayInputStream;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AddEmployeeServiceTest {
+class EmployeeServiceTest {
 
     @Test
     public void testTaxCalculation_TaxFree() {
@@ -81,7 +81,7 @@ class AddEmployeeServiceTest {
         Scanner scanner = new Scanner(System.in);
         Employee employee = new Employee();
 
-        NewEmployeeService.validateEmployeeName(scanner, employee);
-        assertThrows(NoSuchElementException.class, () -> NewEmployeeService.validateEmployeeSalary(scanner, employee));
+        EmployeeService.validateEmployeeName(scanner, employee);
+        assertThrows(NoSuchElementException.class, () -> EmployeeService.validateEmployeeSalary(scanner, employee));
     }
 }
