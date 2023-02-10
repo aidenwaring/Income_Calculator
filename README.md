@@ -39,6 +39,11 @@ their details displayed accordingly: 'name', 'salary', 'taxable income', 'supera
 
 ![form_design](resources/form_design.png)
 
+The design choices made reflect the needs of the bank - a simple onboarding form that will allow the user to easily
+provide the required fields: a name and salary, and be presented with the income calculations for the user.
+The form is a single-page-app which can represent data stored against an employee visually in a table once the user has
+been created. Future development may allow for storing employees to a database for a RESTful API to serve requests to
+provide data.
 
 ## Project Structure
 
@@ -59,12 +64,31 @@ income-calculator
     └── test
         └── EmployeeServiceTest.java
 ```
+
 ## Getting Started
 
-- Prerequisites
-- Installation
+### Prerequisites
+
+* Java 8 or later
+* Maven 3.5+
 
 ## Usage
+
+1. Download the project by downloading the project or cloning it using Git:
+
+```
+git clone https://github.com/aidenwaring/Income_Calculator.git
+```
+
+2. Execute the program through an IDE such as IntelliJ IDEA and running Main.java.
+
+3. Run `mvn test` to run the test suite of the application.
+
+4. Running the app will open a terminal in which the program will prompt the user to enter in a name for the user, and
+   once hitting enter again prompting to enter a salary value. Once enter has been hit, the result will be displayed
+   like so:
+
+![Terminal Result](resources/terminal.png)
 
 ## Testing
 
@@ -78,12 +102,14 @@ Tax bracket calculation is based off the provided criteria below:
 
 - IntelliJ Static Code Analysis
 - Unit tests written with JUnit 5
-- 
+-
 
 ## Future Developement Beyond MVP
 
-Given the time restrictions to complete this task, items beyond creating an MVP for the client remain and may still be worked on in the future.
+Given the time restrictions to complete this task, items beyond creating an MVP for the client remain and may still be
+worked on in the future.
 Several improvements and future features have been identified and listed below:
+
 - Code Coverage Reporting
 - Additional Edge Case Tests
 - Develop Front-End Component
