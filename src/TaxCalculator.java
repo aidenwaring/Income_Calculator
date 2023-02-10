@@ -11,7 +11,7 @@ public class TaxCalculator {
         System.out.println(taxCalculation(salary));
     }
 
-    private static double taxCalculation(double salary) {
+    static double taxCalculation(double salary) {
         double tax = 0;
 
         if (salary <= 18200) {
